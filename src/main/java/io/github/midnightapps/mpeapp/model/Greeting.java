@@ -1,4 +1,4 @@
-package io.github.midnightapps.mpeapp;
+package io.github.midnightapps.mpeapp.model;
 
 public class Greeting {
 

@@ -1,9 +1,8 @@
-package io.github.midnightapps.mpeapp;
+package io.github.midnightapps.mpeapp.controller;
 
-import java.util.Calendar;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicLong;
 
+import io.github.midnightapps.mpeapp.model.Greeting;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,10 +19,4 @@ public class GreetingController {
                 String.format(template, name));
     }
 
-    @RequestMapping("/fazenda-urbana")
-    public Leitura fazendaUrbana() {
-        Variavel temperaturaAr = new Variavel(ThreadLocalRandom.current().nextInt(1, Integer.MAX_VALUE), "Temperatura do Ar");
-        Leitura leitura = new Leitura(ThreadLocalRandom.current().nextInt(1, Integer.MAX_VALUE), temperaturaAr, Calendar.getInstance().getTime(), ThreadLocalRandom.current().nextDouble(-20, 50));
-        return leitura;
-    }
 }
